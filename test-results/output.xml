@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20231219 08:02:31.745" rpa="false" schemaversion="2">
+<suite id="s1" name="Esb" source="C:\Users\Lenovo\esb_automation\esb\Web\Testcase\esb.robot">
+<test id="s1-t1" name="User able Add Job Title">
+<kw name="Open Local Apps" library="resources" type="SETUP">
+<arg>${base_url_esb}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231219 08:02:32.310" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20231219 08:02:32.310" endtime="20231219 08:02:42.308"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231219 08:02:42.308" endtime="20231219 08:02:42.432"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:32.310" endtime="20231219 08:02:42.432"/>
+</kw>
+<kw name="Given System display Screen Login" library="page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${SCREEN_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231219 08:02:42.438" endtime="20231219 08:02:43.607"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:42.432" endtime="20231219 08:02:43.607"/>
+</kw>
+<kw name="When User Input User Name" library="page">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${INPUT_UN}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:43.623" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20231219 08:02:43.623" endtime="20231219 08:02:43.834"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:43.623" endtime="20231219 08:02:43.834"/>
+</kw>
+<kw name="And User Input Password" library="page">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${INPUT_PW}</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:43.850" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20231219 08:02:43.834" endtime="20231219 08:02:44.051"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:43.834" endtime="20231219 08:02:44.066"/>
+</kw>
+<kw name="And User Click Button Login" library="page">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BTN_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:44.066" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231219 08:02:44.066" endtime="20231219 08:02:44.175"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:44.066" endtime="20231219 08:02:44.175"/>
+</kw>
+<kw name="And System display Screen Dashboard" library="page">
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<arg>${VRFY_SCREEN_DASH}</arg>
+<arg>Dashboard</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231219 08:02:44.183" endtime="20231219 08:02:46.064"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:44.183" endtime="20231219 08:02:46.064"/>
+</kw>
+<kw name="And System display Username" library="page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${VRFY_UN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231219 08:02:46.064" endtime="20231219 08:02:46.117"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:46.064" endtime="20231219 08:02:46.117"/>
+</kw>
+<kw name="And User Click Menu PIM" library="page">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${MENU_PIM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:46.117" level="INFO">Clicking element 'xpath=//a[contains(.,'PIM')]'.</msg>
+<status status="PASS" starttime="20231219 08:02:46.117" endtime="20231219 08:02:47.423"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:46.117" endtime="20231219 08:02:47.423"/>
+</kw>
+<kw name="And System display Screen PIM" library="page">
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231219 08:02:47.431" endtime="20231219 08:02:47.431"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${SCREEN_PIM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231219 08:02:47.431" endtime="20231219 08:02:49.403"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:47.431" endtime="20231219 08:02:49.403"/>
+</kw>
+<kw name="And User Scroll to Record Found PIM" library="page">
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<arg>${SCROLL_TO_RECORDFOUND_PIM}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231219 08:02:49.403" endtime="20231219 08:02:50.781"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:49.403" endtime="20231219 08:02:50.781"/>
+</kw>
+<kw name="And System display Record PIM" library="page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${SCREEN_RECORD_PIM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231219 08:02:50.781" endtime="20231219 08:02:51.873"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:50.781" endtime="20231219 08:02:51.873"/>
+</kw>
+<kw name="And User Click Icon Edit" library="page">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ICONE_EDIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:51.873" level="INFO">Clicking element 'xpath=//button[2]/i'.</msg>
+<status status="PASS" starttime="20231219 08:02:51.873" endtime="20231219 08:02:53.841"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:51.873" endtime="20231219 08:02:53.841"/>
+</kw>
+<kw name="And User Click Job" library="page">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${MENU_JOB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:53.841" level="INFO">Clicking element 'xpath=//a[contains(text(),'Job')]'.</msg>
+<status status="PASS" starttime="20231219 08:02:53.841" endtime="20231219 08:02:56.056"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:53.841" endtime="20231219 08:02:56.057"/>
+</kw>
+<kw name="And System display Screen Job" library="page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${SCREEN_JOB}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231219 08:02:56.057" endtime="20231219 08:02:57.135"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:56.057" endtime="20231219 08:02:57.135"/>
+</kw>
+<kw name="And User Click Job Title" library="page">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CMB_JOB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:57.135" level="INFO">Clicking element 'xpath=//div[2]/div/div[2]/div/div/div'.</msg>
+<status status="PASS" starttime="20231219 08:02:57.135" endtime="20231219 08:02:58.339"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:57.135" endtime="20231219 08:02:58.339"/>
+</kw>
+<kw name="And User Select One Job Title" library="page">
+<kw name="Mouse Up" library="Selenium2Library">
+<arg>${JOB_TITLE}</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20231219 08:02:58.339" level="INFO">Simulating Mouse Up on element 'xpath=//div[5]/div/div[2]/div/div/div'.</msg>
+<status status="PASS" starttime="20231219 08:02:58.339" endtime="20231219 08:02:59.694"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:58.339" endtime="20231219 08:02:59.694"/>
+</kw>
+<kw name="And User Click Button Save PIM" library="page">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BTN_SAVE_JOB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231219 08:02:59.694" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231219 08:02:59.694" endtime="20231219 08:03:00.868"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:59.694" endtime="20231219 08:03:00.869"/>
+</kw>
+<kw name="Then System display Message Successfully Update" library="page">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${VRFY_ALERT_SUCESS_UPDATED}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231219 08:03:00.869" endtime="20231219 08:03:02.740"/>
+</kw>
+<status status="PASS" starttime="20231219 08:03:00.869" endtime="20231219 08:03:02.740"/>
+</kw>
+<kw name="Close Browser Applications" library="resources" type="TEARDOWN">
+<kw name="Screenshot Tests" library="resources">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>filename=${TEST NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231219 08:03:03.513" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="User%20able%20Add%20Job%20Title.png"&gt;&lt;img src="User%20able%20Add%20Job%20Title.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231219 08:03:02.740" endtime="20231219 08:03:03.513"/>
+</kw>
+<status status="PASS" starttime="20231219 08:03:02.740" endtime="20231219 08:03:03.513"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231219 08:03:03.513" endtime="20231219 08:03:06.263"/>
+</kw>
+<status status="PASS" starttime="20231219 08:03:02.740" endtime="20231219 08:03:06.263"/>
+</kw>
+<status status="PASS" starttime="20231219 08:02:32.310" endtime="20231219 08:03:06.263"/>
+</test>
+<status status="PASS" starttime="20231219 08:02:31.745" endtime="20231219 08:03:06.263"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Esb">Esb</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
