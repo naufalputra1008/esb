@@ -11,31 +11,31 @@ ${base_url_reg_failed}=        https://reqres.in/api/register
 
 
 *** Test Case ***
-# Create CommentGet User from page 2
-#     create session  mysession   ${base_url_getuser}
+Create CommentGet User from page 2
+    create session  mysession   ${base_url_getuser}
 
-#     ${response}=    get request    mysession    ?page=2
+    ${response}=    get request    mysession    ?page=2
     
-#     log to console  ${response.content}
+    log to console  ${response.content}
 
-#     ${res_body}=    convert to string   ${response.content}
-#     should contain  ${res_body}     2
-#     should contain  ${res_body}     7
-#     should contain  ${res_body}     michael.lawson@reqres.in
-#     should contain  ${res_body}     Lawson
+    ${res_body}=    convert to string   ${response.content}
+    should contain  ${res_body}     2
+    should contain  ${res_body}     7
+    should contain  ${res_body}     michael.lawson@reqres.in
+    should contain  ${res_body}     Lawson
 
-# Get Single User with ID 10
-#     create session  mysession   ${base_url_get_singgle_user}
+Get Single User with ID 10
+    create session  mysession   ${base_url_get_singgle_user}
 
-#     ${response}=    get request    mysession    10
+    ${response}=    get request    mysession    10
     
-#     log to console  ${response.content}
+    log to console  ${response.content}
 
-#     ${res_body}=    convert to string   ${response.content}
-#     should contain  ${res_body}     10
-#     should contain  ${res_body}     byron.fields@reqres.in
-#     should contain  ${res_body}     Byron
-#     should contain  ${res_body}     Fields
+    ${res_body}=    convert to string   ${response.content}
+    should contain  ${res_body}     10
+    should contain  ${res_body}     byron.fields@reqres.in
+    should contain  ${res_body}     Byron
+    should contain  ${res_body}     Fields
 
 Register successful
     ${payload}=    Load JSON From File         Api/collection/RegisSuccess.json
